@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senff_Notifications_Project.Domain", "Senff_Notifications_Project.Domain\Senff_Notifications_Project.Domain.csproj", "{59E5463B-A121-4A0F-8DEA-9A868215D7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senff_Notifications_Project.Infra.Data", "Senff_Notifications_Project.Infra.Data\Senff_Notifications_Project.Infra.Data.csproj", "{FFF3B6B1-EF8B-46A1-B699-B07F500DA791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senff_Notifications_Project.Application", "Senff_Notifications_Project.Application\Senff_Notifications_Project.Application.csproj", "{9556B4AE-5A4F-4A62-89AA-70C31C4A9176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senff_Notifications_Project.Infra.Ioc", "Senff_Notifications_Project.Infra.Ioc\Senff_Notifications_Project.Infra.Ioc.csproj", "{2792A2CA-E8F0-442D-B65E-E89119E4ABEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senff_Notifications_Project.Api", "Senff_Notifications_Project.Api\Senff_Notifications_Project.Api.csproj", "{829DB41E-F90F-415D-8E9C-A13F1AFF48B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59E5463B-A121-4A0F-8DEA-9A868215D7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E5463B-A121-4A0F-8DEA-9A868215D7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E5463B-A121-4A0F-8DEA-9A868215D7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E5463B-A121-4A0F-8DEA-9A868215D7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF3B6B1-EF8B-46A1-B699-B07F500DA791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF3B6B1-EF8B-46A1-B699-B07F500DA791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF3B6B1-EF8B-46A1-B699-B07F500DA791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF3B6B1-EF8B-46A1-B699-B07F500DA791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9556B4AE-5A4F-4A62-89AA-70C31C4A9176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9556B4AE-5A4F-4A62-89AA-70C31C4A9176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9556B4AE-5A4F-4A62-89AA-70C31C4A9176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9556B4AE-5A4F-4A62-89AA-70C31C4A9176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2792A2CA-E8F0-442D-B65E-E89119E4ABEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2792A2CA-E8F0-442D-B65E-E89119E4ABEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2792A2CA-E8F0-442D-B65E-E89119E4ABEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2792A2CA-E8F0-442D-B65E-E89119E4ABEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829DB41E-F90F-415D-8E9C-A13F1AFF48B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829DB41E-F90F-415D-8E9C-A13F1AFF48B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829DB41E-F90F-415D-8E9C-A13F1AFF48B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829DB41E-F90F-415D-8E9C-A13F1AFF48B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1FA5977-6D46-4832-884C-B847275D3F6D}
+	EndGlobalSection
+EndGlobal
