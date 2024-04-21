@@ -8,9 +8,9 @@ namespace Senff_Notifications_Project.Api.Controllers
     [ApiController]
     public class SubscriptionPlanController : ControllerBase
     {
-        private readonly ISubscriptionPlan _subscriptionPlan;
+        private readonly ISubscriptionPlanService _subscriptionPlan;
 
-        public SubscriptionPlanController(ISubscriptionPlan subscriptionPlan)
+        public SubscriptionPlanController(ISubscriptionPlanService subscriptionPlan)
         {
             _subscriptionPlan = subscriptionPlan;
         }

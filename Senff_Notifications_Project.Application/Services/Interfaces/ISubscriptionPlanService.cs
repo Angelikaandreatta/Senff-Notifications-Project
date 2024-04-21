@@ -2,7 +2,7 @@
 
 namespace Senff_Notifications_Project.Application.Services.Interfaces
 {
-    public interface ISubscriptionPlan
+    public interface ISubscriptionPlanService
     {
         Task<ResultService<SubscriptionPlanModel>> Create(SubscriptionPlanModel subscriptionPlan);
         Task<ResultService<SubscriptionPlanModel>> GetByLogin(string email, string senha);
