@@ -10,6 +10,7 @@ namespace Senff_Notifications_Project.Application.Mappings
         {
             CreateMap<SubscriptionPlanModel, SubscriptionPlanDto>();
             CreateMap<CompanyModel, CompanyDto>();
+            CreateMap<NotificationModel, NotificationDto>();
         }
     }
 }

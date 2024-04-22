@@ -25,6 +25,7 @@ namespace Senff_Notifications_Project.Infra.Ioc
             services.AddAutoMapper(typeof(ModelToDtoMapping));
             services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
             services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<INotificationService, NotificationService>();
             return services;
         }
     }
