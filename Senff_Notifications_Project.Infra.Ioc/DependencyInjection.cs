@@ -27,6 +27,7 @@ namespace Senff_Notifications_Project.Infra.Ioc
             services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<ICommunicationService, CommunicationService>();
             return services;
         }
     }
