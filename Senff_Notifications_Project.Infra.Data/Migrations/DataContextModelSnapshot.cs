@@ -51,7 +51,7 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
 
                     b.HasIndex("PlanId");
 
-                    b.ToTable("Company");
+                    b.ToTable("Company", (string)null);
                 });
 
             modelBuilder.Entity("Senff_Notifications_Project.Domain.Models.NotificationModel", b =>
@@ -77,7 +77,7 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notification");
+                    b.ToTable("Notification", (string)null);
                 });
 
             modelBuilder.Entity("Senff_Notifications_Project.Domain.Models.SubscriptionPlanModel", b =>
@@ -95,7 +95,7 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SubscriptionPlan");
+                    b.ToTable("SubscriptionPlan", (string)null);
                 });
 
             modelBuilder.Entity("Senff_Notifications_Project.Domain.Models.UserModel", b =>
@@ -123,7 +123,7 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("Senff_Notifications_Project.Domain.Models.CompanyModel", b =>

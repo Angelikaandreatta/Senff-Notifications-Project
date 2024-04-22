@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Senff_Notifications_Project.Domain.Models
 {
     public class UserModel
     {
+        [Key]
         public Guid Id { get; set; }
 
         public string Name { get; set; }

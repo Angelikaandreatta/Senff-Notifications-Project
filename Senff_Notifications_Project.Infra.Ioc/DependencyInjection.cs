@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Senff_Notifications_Project.Application.Mappings;
 using Senff_Notifications_Project.Application.Services;
 using Senff_Notifications_Project.Application.Services.Interfaces;
 using Senff_Notifications_Project.Domain.Repositories;
@@ -15,13 +16,16 @@ namespace Senff_Notifications_Project.Infra.Ioc
         {
             services.AddDbContextFactory<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("myconnection")));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISubscriptionPlanRepository, SubscriptionPlanRepository>();
 
             return services;
         }
 
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddAutoMapper(typeof(ModelToDtoMapping));
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
             return services;
         }
     }

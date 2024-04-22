@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -15,9 +14,9 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
                 name: "SubscriptionPlan",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PlanType = table.Column<int>(type: "int", nullable: false),
-                    NumberRequests = table.Column<int>(type: "int", maxLength: 3, nullable: false)
+                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
+                    PlanType = table.Column<int>(nullable: false),
+                    NumberRequests = table.Column<int>(maxLength: 3, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,12 +27,12 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
                 name: "Company",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Cnpj = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Phone = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    PlanId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
+                    Name = table.Column<string>(maxLength: 100, nullable: true),
+                    Cnpj = table.Column<string>(maxLength: 20, nullable: true),
+                    Email = table.Column<string>(maxLength: 100, nullable: true),
+                    Phone = table.Column<string>(maxLength: 20, nullable: true),
+                    PlanId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -50,12 +49,12 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
+                    Name = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
+                    CompanyId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,11 +71,11 @@ namespace Senff_Notifications_Project.Infra.Data.Migrations
                 name: "Notification",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    NotificationType = table.Column<int>(type: "int", nullable: false),
-                    Data = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Ip = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
+                    NotificationType = table.Column<int>(nullable: false),
+                    Data = table.Column<DateTime>(nullable: false),
+                    Ip = table.Column<string>(maxLength: 20, nullable: true),
+                    UserId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {

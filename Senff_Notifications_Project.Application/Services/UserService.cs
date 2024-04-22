@@ -1,5 +1,4 @@
 ﻿using Senff_Notifications_Project.Application.Services.Interfaces;
-using Senff_Notifications_Project.Domain.Models;
 using Senff_Notifications_Project.Domain.Repositories;
 
 namespace Senff_Notifications_Project.Application.Services
@@ -13,22 +12,22 @@ namespace Senff_Notifications_Project.Application.Services
             _userRepository = userRepository;
         }
 
-        public async Task<ResultService<UserModel>> GetUserById(Guid userId)
-        {
-            var user = _userRepository.GetUserById(userId);
+        //public async Task<ResultService<UserDto>> GetUserById(Guid userId)
+        //{
+        //    var user = _userRepository.GetUserById(userId);
 
-            return ResultService.Ok<UserModel>(user);
-        }
+        //    return ResultService.Ok<UserDto>(user);
+        //}
 
-        public async Task<ResultService<UserModel>> Authenticate(string email, string password)
-        {
-            var user = await _userRepository.Authenticate(email, password);
+        //public async Task<ResultService<UserDto>> Authenticate(string email, string password)
+        //{
+        //    var user = await _userRepository.Authenticate(email, password);
 
-            if (user == null || !VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-                return null;
+        //    if (user == null || !VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+        //        return null;
 
-            return ResultService.Ok<UserModel>(user);
-        }
+        //    return ResultService.Ok<UserDto>(user);
+        //}
 
         private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {

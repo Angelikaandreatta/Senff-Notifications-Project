@@ -1,13 +1,12 @@
-﻿using Senff_Notifications_Project.Domain.Models;
+﻿using Senff_Notifications_Project.Application.DTOs;
 
 namespace Senff_Notifications_Project.Application.Services.Interfaces
 {
     public interface ISubscriptionPlanService
     {
-        Task<ResultService<SubscriptionPlanModel>> Create(SubscriptionPlanModel subscriptionPlan);
-        Task<ResultService<SubscriptionPlanModel>> GetByLogin(string email, string senha);
-        Task<ResultService<SubscriptionPlanModel>> GetByIdAsync(string id);
-        Task<ResultService> UpdateAsync(SubscriptionPlanModel subscriptionPlan);
-        Task<ResultService> DeleteAsync(string id);
+        Task<ResultService<SubscriptionPlanDto>> Create(SubscriptionPlanDto subscriptionPlan);
+        Task<ResultService<SubscriptionPlanDto>> GetById(Guid id);
+        Task<ResultService> Update(SubscriptionPlanDto subscriptionPlan);
+        Task<ResultService> Delete(Guid id);
     }
 }

@@ -5,6 +5,7 @@ namespace Senff_Notifications_Project.Domain.Models
 {
     public class SubscriptionPlanModel
     {
+        [Key]
         public Guid Id { get; set; }
 
         public SubscriptionPlanType PlanType { get; set; }

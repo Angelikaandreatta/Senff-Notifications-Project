@@ -1,9 +1,7 @@
-﻿using Senff_Notifications_Project.Domain.Models;
-
-namespace Senff_Notifications_Project.Domain.Repositories
+﻿namespace Senff_Notifications_Project.Domain.Repositories
 {
     public interface IUserRepository
     {
-        Task<UserModel> GetUserById(Guid id);
+        //Task<UserModel> GetUserById(Guid id);
     }
 }

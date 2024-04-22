@@ -5,6 +5,7 @@ namespace Senff_Notifications_Project.Domain.Models
 {
     public class CompanyModel
     {
+        [Key]
         public Guid Id { get; set; }
 
         [MaxLength(100)]
