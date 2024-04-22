@@ -8,12 +8,12 @@ namespace Senff_Notifications_Project.Application.Services
 {
     public class SubscriptionPlanService : ISubscriptionPlanService
     {
-        private readonly ISubscriptionPlanRepository _subscriptionPlanRepository;
+        private readonly IRepository<SubscriptionPlanModel> _repository;
         private readonly IMapper _mapper;
 
-        public SubscriptionPlanService(ISubscriptionPlanRepository subscriptionPlanRepository, IMapper mapper)
+        public SubscriptionPlanService(IRepository<SubscriptionPlanModel> repository, IMapper mapper)
         {
-            _subscriptionPlanRepository = subscriptionPlanRepository ?? throw new ArgumentNullException(nameof(subscriptionPlanRepository));
+            _repository = repository;
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
@@ -23,7 +23,7 @@ namespace Senff_Notifications_Project.Application.Services
                 return ResultService.Fail<SubscriptionPlanDto>("Object must be provided.");
 
             var subscriptionPlanModel = _mapper.Map<SubscriptionPlanDto, SubscriptionPlanModel>(subscriptionPlanDto);
-            var createdSubscriptionPlan = await _subscriptionPlanRepository.Create(subscriptionPlanModel);
+            var createdSubscriptionPlan = await _repository.Create(subscriptionPlanModel);
             var createdSubscriptionPlanDto = _mapper.Map<SubscriptionPlanModel, SubscriptionPlanDto>(createdSubscriptionPlan);
 
             return ResultService.Ok(createdSubscriptionPlanDto);
@@ -31,7 +31,7 @@ namespace Senff_Notifications_Project.Application.Services
 
         public async Task<ResultService<SubscriptionPlanDto>> GetById(Guid id)
         {
-            var subscriptionPlan = await _subscriptionPlanRepository.GetById(id);
+            var subscriptionPlan = await _repository.GetById(id);
 
             if (subscriptionPlan == null)
                 return ResultService.Fail<SubscriptionPlanDto>("Subscription plan not found.");
@@ -46,19 +46,19 @@ namespace Senff_Notifications_Project.Application.Services
                 return ResultService.Fail("Object must be provided.");
 
             var subscriptionPlanModel = _mapper.Map<SubscriptionPlanDto, SubscriptionPlanModel>(subscriptionPlanDto);
-            await _subscriptionPlanRepository.Update(subscriptionPlanModel);
+            await _repository.Update(subscriptionPlanModel);
 
             return ResultService.Ok("Subscription plan updated successfully.");
         }
 
         public async Task<ResultService> Delete(Guid id)
         {
-            var subscriptionPlan = await _subscriptionPlanRepository.GetById(id);
+            var subscriptionPlan = await _repository.GetById(id);
 
             if (subscriptionPlan == null)
                 return ResultService.Fail("Subscription plan not found.");
 
-            await _subscriptionPlanRepository.Delete(id);
+            await _repository.Delete(subscriptionPlan);
             return ResultService.Ok("Subscription plan deleted successfully.");
         }
     }

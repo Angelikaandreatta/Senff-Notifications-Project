@@ -15,8 +15,7 @@ namespace Senff_Notifications_Project.Infra.Ioc
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContextFactory<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("myconnection")));
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ISubscriptionPlanRepository, SubscriptionPlanRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             return services;
         }
@@ -24,7 +23,6 @@ namespace Senff_Notifications_Project.Infra.Ioc
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAutoMapper(typeof(ModelToDtoMapping));
-            services.AddScoped<IUserService, UserService>();
             services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
             return services;
         }
