@@ -1,5 +1,5 @@
 # Microservice de Notificações
-Este microservice é uma API desenvolvida para facilitar o disparo de notificações via SMS, WhatsApp e/ou E-mail. Ele é construído utilizando o framework .NET Core 6.0 e adota uma arquitetura flexível para atender às necessidades do projeto.
+Este microservice é uma API desenvolvida para facilitar o disparo de notificações via SMS e E-mail. Ele é construído utilizando o framework .NET Core 6.0 e adota uma arquitetura flexível para atender às necessidades do projeto.
 
 ### Introdução
 O objetivo principal deste microservice é oferecer uma solução centralizada para o envio de notificações para os clientes de uma empresa. Ele permite que os usuários se cadastrem, autentiquem-se e solicitem o envio de notificações por meio de diferentes canais de comunicação.
@@ -19,7 +19,7 @@ Possibilita a integração com pelo menos 2 parceiros diferentes para o envio de
 ### Tecnologias Utilizadas
 - .NET 6.0
 - JWT para autenticação
-- Banco de dados Sql Server
+- Banco de dados Sql Server com Entity Framework
 
 ### Contribuição
 Contribuições são bem-vindas! Se você encontrar algum bug, tiver alguma sugestão de melhoria ou desejar contribuir com código, sinta-se à vontade para abrir uma issue ou enviar um pull request.
