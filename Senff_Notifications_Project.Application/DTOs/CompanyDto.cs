@@ -1,5 +1,4 @@
-﻿using Senff_Notifications_Project.Domain.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Senff_Notifications_Project.Application.DTOs
 {
@@ -24,7 +23,5 @@ namespace Senff_Notifications_Project.Application.DTOs
 
         [Required(ErrorMessage = "Plan ID is required.")]
         public Guid PlanId { get; set; }
-
-        public SubscriptionPlanModel SubscriptionPlan { get; set; }
     }
 }

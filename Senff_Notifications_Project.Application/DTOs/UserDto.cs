@@ -1,5 +1,4 @@
-﻿using Senff_Notifications_Project.Domain.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Senff_Notifications_Project.Application.DTOs
 {
@@ -25,7 +24,5 @@ namespace Senff_Notifications_Project.Application.DTOs
 
         [Required(ErrorMessage = "Company ID is required.")]
         public Guid CompanyId { get; set; }
-
-        public CompanyModel Company { get; set; }
     }
 }

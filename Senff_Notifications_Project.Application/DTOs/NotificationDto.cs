@@ -18,7 +18,5 @@ namespace Senff_Notifications_Project.Application.DTOs
 
         [Required(ErrorMessage = "User ID is required.")]
         public Guid UserId { get; set; }
-
-        public UserDto User { get; set; }
     }
 }
