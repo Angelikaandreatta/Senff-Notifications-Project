@@ -24,5 +24,15 @@ namespace Senff_Notifications_Project.Api.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpPut]
+        public async Task<ActionResult> SendEmail([FromBody] EmailDto email)
+        {
+            var result = await _communication.SendEmail(email);
+            if (result.IsSuccess)
+                return Ok(result);
+
+            return BadRequest(result);
+        }
     }
 }

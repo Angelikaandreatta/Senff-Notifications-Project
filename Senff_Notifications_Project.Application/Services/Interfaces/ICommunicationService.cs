@@ -5,5 +5,6 @@ namespace Senff_Notifications_Project.Application.Services.Interfaces
     public interface ICommunicationService
     {
         ResultService SendSms(SmsDto sms);
+        Task<ResultService> SendEmail(EmailDto email);
     }
 }
